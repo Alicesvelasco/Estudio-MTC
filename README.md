@@ -87,3 +87,30 @@ Estudio-MTC/
 Crea un `.md` en `content/tests/` siguiendo
 [`docs/formato-tests.md`](docs/formato-tests.md). Al hacer push a `main`, el
 workflow lo compila y publica.
+
+## Desarrollo local
+
+Requiere Node.js 22 o superior.
+
+```bash
+npm install        # instala dependencias
+npm run dev        # servidor de desarrollo en http://localhost:5173/Estudio-MTC/
+npm test           # tests (incluye la validación de todos los .md)
+npm run build      # tests + typecheck + build estático en dist/
+npm run preview    # sirve dist/ para probar el build
+```
+
+## Despliegue en GitHub Pages
+
+El despliegue es automático con `.github/workflows/deploy.yml`:
+
+1. En GitHub, ve a **Settings → Pages → Build and deployment → Source** y
+   elige **GitHub Actions** (solo hay que hacerlo una vez).
+2. Haz push a `main`. El workflow ejecuta `npm run build` y publica `dist/`.
+3. La web queda en `https://<usuario>.github.io/Estudio-MTC/`.
+
+También se puede lanzar a mano desde la pestaña **Actions → Deploy to GitHub
+Pages → Run workflow**.
+
+> Si renombras el repositorio, cambia `base` en `vite.config.ts` para que
+> coincida con el nuevo nombre.
