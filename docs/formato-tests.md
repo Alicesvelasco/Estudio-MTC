@@ -12,10 +12,10 @@ validar de forma estricta al compilar.
 
 ```yaml
 ---
-id: javascript-asincrono     # obligatorio · único · kebab-case · NO cambiarlo nunca
-title: JavaScript asíncrono  # obligatorio
+id: fundamentos-mtc          # obligatorio · único · kebab-case · NO cambiarlo nunca
+title: Fundamentos de MTC    # obligatorio
 description: Texto corto     # opcional
-category: JavaScript         # opcional · agrupa tests en la pantalla de inicio
+category: Teoría básica      # opcional · agrupa tests en la pantalla de inicio
 difficulty: media            # opcional · baja | media | alta
 version: 1                   # opcional · súbelo si cambias preguntas a fondo
 shuffleQuestions: true       # opcional · por defecto false
@@ -32,13 +32,9 @@ Cada pregunta empieza con un encabezado de nivel 2 y termina donde empieza la
 siguiente (o al final del fichero):
 
 ````markdown
-## Enunciado de la pregunta (admite `código` y **negrita**)
+## Enunciado de la pregunta (admite **negrita** y *cursiva*)
 
-Párrafos o bloques de código opcionales que forman parte del enunciado.
-
-```js
-console.log("hola");
-```
+Párrafos opcionales que forman parte del enunciado (casos clínicos, tablas…).
 
 - [ ] Opción incorrecta
 - [x] Opción correcta
@@ -47,7 +43,7 @@ console.log("hola");
 > Explicación de la respuesta. Puede ocupar varias líneas;
 > cada una empieza por `>`.
 
-Etiquetas: Concepto A, Concepto B
+Etiquetas: Cinco Elementos, Zang-Fu
 ````
 
 | Parte        | Sintaxis                          | Reglas                                                        |
@@ -62,7 +58,7 @@ Etiquetas: Concepto A, Concepto B
 - Los bloques de código con ``` se respetan: una línea `- [ ]` o `## ` dentro de
   un bloque de código **no** se interpreta como opción o pregunta.
 - Las etiquetas se normalizan (espacios recortados, comparación sin
-  distinguir mayúsculas), así que `Promesas` y `promesas` cuentan como el mismo
+  distinguir mayúsculas), así que `Zang-Fu` y `zang-fu` cuentan como el mismo
   concepto. Usa siempre la misma grafía para que el dashboard las muestre bien.
 - Cada pregunta recibe un identificador estable `"<id-del-test>#<hash>"`
   calculado a partir del enunciado. Puedes reordenar preguntas sin perder sus

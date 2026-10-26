@@ -23,7 +23,7 @@ Estudio-MTC/
 │       └── deploy.yml            # CI: build + deploy a GitHub Pages
 ├── content/
 │   └── tests/                    # ← UN FICHERO .md POR TEST
-│       └── javascript-asincrono.md
+│       └── fundamentos-mtc.md
 ├── docs/
 │   └── formato-tests.md          # especificación del formato Markdown
 ├── public/
