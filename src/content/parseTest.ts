@@ -1,5 +1,7 @@
+// Este fichero también lo carga vite.config.ts (vía plugins/content.ts), por eso
+// sus imports llevan la extensión .ts explícita.
 import { parse as parseYaml } from 'yaml'
-import type { Difficulty, Question, Test } from '../domain/types'
+import type { Difficulty, Question, Test } from '../domain/types.ts'
 
 export class TestFormatError extends Error {
   constructor(file: string, message: string, question?: string) {
